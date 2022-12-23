@@ -1,7 +1,7 @@
 <template>
-  <footer class="bg-white mb-0 mt-2 position-static " style="left: 0;right: 0;bottom: 0;">
+  <footer class="bg-white mb-0 mt-2 w-100 shadow-lg ">
 <!--    <li class="dropdown-divider mb-4"></li>-->
-    <div class="row container p-lg-4 mx-auto">
+    <div class="row container p-4 mx-auto">
       <div class="col d-lg-block">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
@@ -61,8 +61,5 @@ export default {
 </script>
 
 <style scoped>
-a {
-  text-decoration: none;
-}
 
 </style>

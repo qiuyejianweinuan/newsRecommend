@@ -1,13 +1,26 @@
+<script>
+import $ from 'jquery/dist/jquery.min'
+import Header from "@/components/common/Header.vue";
+export default {
+  name: "indexIntroduce",
+  components:{
+    Header
+  },
+  mounted() {
+    $("#indexIntroduceSearch").focus();
+  }
+}
+</script>
 <template>
   <section class="py-5 text-center w-100 shadow">
-    <div class="row py-lg-5">
+    <div class="py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
+
         <h1 class="fw-light">新闻推荐系统</h1>
-        <p class="lead text-muted">SpringBoot开发的新闻推荐系统,看您想看</p>
-        <div class="input-group">
+        <p class="lead text-muted">基于推荐算法开发的新闻推荐系统,看您想看</p>
+        <div class="input-group container">
           <!--            <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
-          <!--            <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
-          <input class="form-control h-50px rounded" list="datalistOptions" id="exampleDataList"
+          <input class="form-control h-50px rounded" list="datalistOptions" id="indexIntroduceSearch"
                  placeholder="在此搜索...">
           <button class="btn w-80px btn-outline-dark rounded " type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search "
@@ -19,14 +32,12 @@
         </div>
       </div>
     </div>
+
   </section>
+
 </template>
 
-<script>
-export default {
-  name: "indexIntroduce"
-}
-</script>
+
 
 <style scoped>
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import './base.css';
 
 #app {
@@ -9,13 +10,34 @@
   font-weight: normal;
 }
 
+
 a,
 .green {
   text-decoration: none;
-  /*color: hsla(160, 100%, 37%, 1);*/
   transition: 0.4s;
 }
 
+.newsTop:hover{
+  color: red;
+}
+.newsTop{
+  font-size: 23px !important;
+  font-weight: 500;
+  line-height: 28px;
+}
+.newsTop.active{
+  /*line-height: 30px;*/
+  /*text-decoration: underline 3px;*/
+  color: red;
+}
+
+.svg-icon{
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 a{
   text-decoration: none;
 }
@@ -25,7 +47,8 @@ li{
 }
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    /*color: hsla();*/
+    /*background-color: hsla(160, 100%, 37%, 0.2);*/
   }
 }
 
@@ -41,7 +64,6 @@ li{
 /*    padding: 0 2rem;*/
 /*  }*/
 /*}*/
-@charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -237,6 +259,11 @@ dd {
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, .h1 > a, .h2 > a, .h3 > a, .h4 > a, .h5 > a, .h6 > a {
   color: #14191e;
 }
+a:-webkit-any-link {
+  color:#14191e ;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover, .h1 > a:hover, .h2 > a:hover, .h3 > a:hover, .h4 > a:hover, .h5 > a:hover, .h6 > a:hover {
   color: #0f6fec;
@@ -250,6 +277,7 @@ b, strong {
 }
 
 .small, small {
+  color: #999999 !important;
   font-size: .875em
 }
 
@@ -668,33 +696,45 @@ progress {
   margin-right: auto;
   margin-left: auto
 }
+.header {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .55rem);
+  padding-left: var(--bs-gutter-x, .55rem);
+  margin-right: auto;
+  margin-left: auto
+}
 
 @media (min-width: 576px) {
-  .container, .container-sm {
-    max-width: 100%
+  .container, .container-sm .header{
+    max-width: 90%
   }
 }
 
 @media (min-width: 768px) {
-  .container, .container-md, .container-sm {
-    max-width: 100%
+  .container, .container-md, .container-sm .header{
+    max-width: 90%
   }
 }
 
 @media (min-width: 992px) {
-  .container, .container-lg, .container-md, .container-sm {
-    max-width: 980px
+  .container, .container-lg, .container-md, .container-sm .header{
+    max-width: 90%
   }
 }
 
 @media (min-width: 1200px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1180px
+  .container, .container-lg, .container-md, .container-sm, .container-xl .header{
+    max-width: 90%
   }
 }
 
 @media (min-width: 1400px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 80%
+  }
+}
+@media (min-width: 1400px) {
+  .header {
     max-width: 90%
   }
 }
@@ -2188,6 +2228,35 @@ progress {
   }
 }
 
+
+.form-news{
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+  height: 30px;
+  font-size: 25px;
+  width: 100%;
+  /*font-weight: unset;*/
+}
+.form-news:focus{
+  border: 0;
+  /*outline: 0;*/
+  background-color: #fff;
+}
+.news-body{
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  background-color: #fff;
+  font-weight: unset;
+}
+.news-body:focus{
+  border: 0;
+  outline: 0;
+  background-color: #fff;
+}
+
+
 .form-control[type=file] {
   overflow: hidden
 }
@@ -2793,7 +2862,6 @@ textarea.form-control-lg {
 
 .input-group .btn {
   position: relative;
-  z-index: 2
 }
 
 .input-group .btn:focus {
@@ -3705,7 +3773,7 @@ textarea.form-control-lg {
   display: none;
   min-width: 10rem;
   padding: .5rem 0;
-  margin: 0;
+  margin-right: 50%;;
   font-size: 1rem;
   color: #212529;
   text-align: left;
@@ -3718,7 +3786,7 @@ textarea.form-control-lg {
 
 .dropdown-menu[data-bs-popper] {
   top: 100%;
-  left: 0;
+  left: 50%;
   margin-top: .125rem
 }
 
@@ -4216,7 +4284,7 @@ textarea.form-control-lg {
   padding-bottom: .5rem
 }
 
-.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+.navbar > .container, .navbar >.header,.navbar >.container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -4765,7 +4833,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  /*background-color: */
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, .125);
   border-radius: .25rem
@@ -5953,6 +6021,12 @@ textarea.form-control-lg {
   line-height: 1.5
 }
 
+.rounded-4 {
+  border-radius: 20px;
+}
+.rounded-btn{
+  border-radius: 10px;
+}
 .modal-body {
   position: relative;
   flex: 1 1 auto;
@@ -6780,7 +6854,7 @@ textarea.form-control-lg {
 .offcanvas-bottom {
   right: 0;
   left: 0;
-  height: 30vh;
+  height: 50vh;
   max-height: 100%;
   border-top: 1px solid rgba(0, 0, 0, .2);
   transform: translateY(100%)
@@ -7408,7 +7482,7 @@ textarea.form-control-lg {
 }
 
 .w-100 {
-  width: 100% !important
+  min-width: 100% !important
 }
 
 .w-auto {
@@ -8281,6 +8355,13 @@ textarea.form-control-lg {
 .h-30px{
   height: 30px !important;
 }
+.h-20px{
+  height: 20px !important;
+}
+
+.h-400px{
+  height: 400px !important;
+}
 
 .w-40px{
   width: 40px !important;
@@ -8349,6 +8430,10 @@ textarea.form-control-lg {
 .bg-dark {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important
+}
+.bg-smoke {
+  --bs-bg-opacity: 1;
+  background-color: whitesmoke;
 }
 
 .bg-black {
@@ -8548,17 +8633,40 @@ textarea.form-control-lg {
 }
 
 .avatar-img {
+  cursor: pointer !important;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.news-img {
+  cursor: pointer !important;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
+
+.news-img:hover{
+  animation: move .5s linear forwards;
+}
 .avatar-group {
+
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.02);
+  }
 }
 
 .avatar-group > li {
@@ -11934,6 +12042,14 @@ textarea.form-control-lg {
 
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  /*margin-top: 0;*/
+}
+
 /*# sourceMappingURL=bootstrap.min.css.map */
 
 
+.animateMY{
+  transform: translateY(64px);
+}
