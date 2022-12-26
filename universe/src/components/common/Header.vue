@@ -1,10 +1,10 @@
 <template>
 
-  <div class="navbar navbar-expand-lg  navbar-light bg-white animate__animated">
+  <div class="navbar navbar-expand-lg  navbar-dark animate__animated" id="topHead">
     <LoadScroll></LoadScroll>
     <div class="header">
       <!-- Logo START -->
-      <RouterLink class="navbar-brand" to="/" title="网站首页">
+      <RouterLink class="h3 my-auto text-white tf-wr fw-normal" to="/" title="网站首页">
         新闻系统
       </RouterLink>
 
@@ -23,8 +23,9 @@
       <!-- Main navbar START -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <!-- Nav Search START 搜索框-->
-        <SearchGroup></SearchGroup>
+<!--        <SearchGroup></SearchGroup>-->
         <!-- Nav Search END -->
+
         <HeadMenu></HeadMenu>
         <Account></Account>
       </div>
@@ -37,26 +38,36 @@
     </div>
 
   </div>
-  <div class="navbar navbar-light d-none bg-white animate__animated navbar navbar-expand-lg " id="hea">
+  <div class=" navbar navbar-expand-lg navbar-light d-none bg-white animate__animated  " id="hea">
     <LoadScroll></LoadScroll>
     <div class="header">
       <div class="navbar-brand">
-        <a class="newsTop ms-3">关注</a>
-        <a class="newsTop ms-3 active" href="#">推荐</a>
-        <a class="newsTop ms-3">热门</a>
-        <a class="newsTop ms-3">金融</a>
-        <a class="newsTop ms-3">科技</a>
-        <a class="newsTop ms-3">视频</a>
-        <a class="newsTop ms-3">国际</a>
+        <RouterLink class="h4 my-auto text-danger tf-wr fw-normal float-start"  to="/">新闻系统</RouterLink>
+        <NewsMenu></NewsMenu>
+<!--        <a class="newsTop ms-2">关注</a>-->
+<!--        <a class="newsTop ms-2 active" href="#">推荐</a>-->
+<!--        <a class="newsTop ms-2">热门</a>-->
+<!--        <a class="newsTop ms-2">金融</a>-->
+<!--        <a class="newsTop ms-2">科技</a>-->
+<!--        <a class="newsTop ms-2">视频</a>-->
+<!--        <a class="newsTop ms-2">国际</a>-->
       </div>
-      <div class="collapse navbar-collapse">
+
+      <button class="navbar-toggler ms-auto icon-md btn btn-light p-0 me-2 " type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse1" aria-controls="navbarCollapse1" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class=" navbar-toggler-icon ">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarCollapse1">
         <SearchGroup ></SearchGroup>
         <HeadMenu></HeadMenu>
         <Account></Account>
       </div>
-
-
-
 
     </div>
   </div>
@@ -74,6 +85,7 @@ import SearchGroup from "@/components/search/SearchGroup.vue";
 import LoadScroll from "@/components/Load/LoadScroll.vue";
 import Account from "@/components/userCompoents/Account.vue";
 import HeadMenu from "@/components/common/HeadMenu.vue";
+import NewsMenu from "@/components/news/NewsMenu.vue";
 
 export default {
   name: "header",
@@ -83,6 +95,7 @@ export default {
     };
   },
   components: {
+    NewsMenu,
     HeadMenu,
     Account,
     LoadScroll,
@@ -109,11 +122,9 @@ export default {
     let he = 0;
     $(window).scroll(function () {
 
-      if (document.documentElement.scrollTop >= 425) {
+      if (document.documentElement.scrollTop >= 375) {
 
-        //在滚动栏超过560时，使下拉框北京为黑色，下拉框中所有字体颜色为白色以及透明度
-        // $(".wrap_head").addClass("bg-dark");
-        //在560后，只为下拉菜单的链接添加白色字体，导航栏的选项不添加
+
 
         let hea = $("#hea")
         if (he === 0) {
@@ -124,18 +135,11 @@ export default {
           hea.fadeIn()
           he = 1
         }
-        //为登录链接添加黑体
-        // $("#sign").addClass("text-black");
-        // $("#userInfo").find("a").addClass("text-black");
-        // $(".wrap_head").find(".menu_item").find("ul").find("a").addClass("text-white");
 
 
-      } else if (document.documentElement.scrollTop <= 455) {
 
-        //
-        // $(".wrap_head").removeAttr("style");
-        //删除下拉框中的黑色背景以及透明度
-        // $(".wrap_head").removeClass("bg-dark");
+      } else if (document.documentElement.scrollTop <= 415) {
+
         if (he === 1) {
           $("#hea").addClass("d-none")
           $("#hea").removeClass("fixed-top").removeClass("shadow").removeClass(" animate__slideInDown")

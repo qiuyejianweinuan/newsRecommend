@@ -1,7 +1,6 @@
 <script setup>
 import {RouterLink, RouterView} from 'vue-router'
 import ToTop from "@/components/toTop.vue";
-
 </script>
 
 <template>

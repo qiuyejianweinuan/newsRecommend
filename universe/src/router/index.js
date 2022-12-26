@@ -12,13 +12,15 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: HomeView
+            component: HomeView,
+            meta: {title: '新闻推荐系统'},
         },
         {
             path: '/404',
             component: NotFound,
             name: '404',
-            meta: {title: '404未找到'}},
+            meta: {title: '404未找到'}
+        },
         {
             path: '/Example',
             name: 'example',

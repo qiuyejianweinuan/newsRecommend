@@ -1,7 +1,7 @@
 <template>
-  <div class="modal fade py-5 rounded-4 " tabindex="-1" role="dialog" id="ModalSignIn">
+  <div class="modal fade py-3 " tabindex="-1" role="dialog" id="ModalSignIn">
     <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-5 shadow">
+      <div class="modal-content rounded-3 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
           <!-- <h5 class="modal-title">Modal title</h5> -->
           <h2 class="fw-bold mb-0 ">
@@ -13,10 +13,6 @@
             用户登录
           </h2>
           <!--                <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">-->
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-               class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-          </svg>
           <!--                </button>-->
         </div>
 
@@ -37,15 +33,13 @@
                      placeholder="验证码">
               <!--                        <span class="input-group-text" id="basic-addon2">@example.com</span>-->
               <label for="floatingInput"><span class="opacity-50">验证码</span>
-                <img id="checkCode" class="opacity-75" style="width: 110px;height: 26px;"
-                     src="/check"></label>
-              <a class="bg-gradient d-none " style="height: 20px;" id="gh">看不清？</a>
+              </label>
 
             </div>
           </form>
-          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="loginBt">登录</button>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" id="loginBt">登录</button>
           <small class="text-muted">没有Universe账户?<a target="_blank"
-                                                        href="#">点此创建！</a></small>
+                                                        href="/static/user/register.html">点此创建！</a></small>
           <hr class="my-4">
           <h2 class="fs-5 fw-bold mb-3">使用第三方账户</h2>
           <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">

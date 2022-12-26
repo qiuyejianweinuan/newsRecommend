@@ -3,7 +3,7 @@
   <main class="mb-5 mt-3 rounded container  shadow-lg">
     <!--      <li class="dropdown-divider mb-0 ms-3"></li>-->
     <div class="bg-white p-2 animate__animated animate__fadeIn ">
-      <Toolbar class="position-sticky" style=";z-index: 0!important;"
+      <Toolbar class="" style=";z-index: 0!important;"
                :editor="editorRef"
                :defaultConfig="toolbarConfig"
                :mode="mode"

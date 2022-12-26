@@ -1,23 +1,23 @@
 <template>
 <!--  头菜单用户信息,用户未登录时显示登录按钮,用户已登录显示用户头像-->
-  <div class="nav  align-items-center ms-sm-0" v-show="userInfo==null">
+  <div class="nav  align-items-center ms-sm-0 text-light" v-show="userInfo==null">
     <!-- Notification dropdown END -->
 
     <!--                <div id="hea1">-->
     <li class="nav-item" v-show="userInfo==null">
-      <button class="btn btn-outline-dark" data-bs-toggle="modal"
+      <a class="btn btn-danger" data-bs-toggle="modal"
               data-bs-target="#ModalSignIn" @click="userLogin">登录
-      </button>
+      </a>
     </li>
     <!--          登录成功后显示的用户头像-->
-    <li class="nav-item dropdown ms-2" v-show="userInfo==null">
+    <li class="nav-item dropdown ms-2" v-show="userInfo!=null">
       <a class="nav-link btn icon-md p-0" href="#" id="profileDropdown" role="button"
          data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
          aria-expanded="false">
         <img class=" avatar-img rounded-2 " src="../../assets/photo/faker.jpg">
         <!--                        <img class="tou1 avatar-img rounded-2" src=""  v-else>-->
       </a>
-      <ul class="dropdown-menu dropdown-animation dropdown-menu-start pt-3 small me-md-n3"
+      <ul class="dropdown-menu dropdown-animation pt-3 small me-md-n3"
           aria-labelledby="profileDropdown" v-show="userInfo==null">
         <!-- Profile info -->
         <li class="px-3">

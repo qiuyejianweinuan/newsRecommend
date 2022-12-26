@@ -1,9 +1,11 @@
 <script>
 import $ from 'jquery/dist/jquery.min'
 import Header from "@/components/common/Header.vue";
+import BackVideo from "@/components/common/BackVideo.vue";
 export default {
   name: "indexIntroduce",
   components:{
+    BackVideo,
     Header
   },
   mounted() {
@@ -12,17 +14,19 @@ export default {
 }
 </script>
 <template>
-  <section class="py-5 text-center w-100 shadow">
-    <div class="py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
 
-        <h1 class="fw-light">新闻推荐系统</h1>
-        <p class="lead text-muted">基于推荐算法开发的新闻推荐系统,看您想看</p>
+  <section class=" w-100 h-400px">
+    <BackVideo></BackVideo>
+    <div class="py-5 text-center mt-3">
+      <div class="col-lg-6 col-md-8 mx-auto  text-white">
+
+        <h1 class="fw-normal tf-wr">新闻推荐系统</h1>
+
         <div class="input-group container">
           <!--            <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
           <input class="form-control h-50px rounded" list="datalistOptions" id="indexIntroduceSearch"
-                 placeholder="在此搜索...">
-          <button class="btn w-80px btn-outline-dark rounded " type="button">
+                 placeholder="">
+          <button class="btn w-80px btn-danger rounded " type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search "
                  viewBox="0 0 16 16">
               <path
@@ -30,6 +34,7 @@ export default {
             </svg>
           </button>
         </div>
+        <p class="lead">基于推荐算法的新闻推荐系统。在此,看您想看</p>
       </div>
     </div>
 

@@ -1,6 +1,6 @@
 <template>
-  <Header></Header>
-  <main class="container" id="root">
+  <InfoHeader></InfoHeader>
+  <main class="container mt-7" id="root">
 
     <div class="p-4 p-md-5 row mx-auto mb-4  row text-white rounded bg-dark ">
       <div class="px-0 col-md-6">
@@ -304,6 +304,7 @@ import hljs from "highlight.js";
 import NewsLikeAndComment from "@/components/newsLikeAndComment.vue";
 import Header from '@/components/common/Header.vue'
 import NewsFooter from "@/components/common/NewsFooter.vue";
+import InfoHeader from "@/components/common/InfoHeader.vue";
 // import Prism from 'prismjs'
 
 // import hljsVuePlugin from "@highlightjs/vue-plugin";
@@ -311,6 +312,7 @@ import NewsFooter from "@/components/common/NewsFooter.vue";
 export default {
   name: "MarkDownInfo",
   components: {
+    InfoHeader,
     NewsFooter,
     Header,
     NewsLikeAndComment,
