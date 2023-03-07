@@ -173,6 +173,11 @@ export default {
     }
   },
   mounted() {
+
+    this.news.forEach((item)=>{
+      console.log(item)
+    })
+
     document.addEventListener('scroll', this.handleScroll);
     this.getNews()
     // $(window).scroll(function (){

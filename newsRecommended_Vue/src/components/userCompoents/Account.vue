@@ -39,7 +39,7 @@
     </li>
     <!--          登录成功后显示的用户头像-->
     <li class="nav-item dropdown ms-2" v-show="userInfo!=null">
-      <a class="nav-link btn icon-md p-0" href="#" id="profileDropdown" role="button"
+      <a class="nav-link btn icon-md p-0" @click="gotoAbout" id="profileDropdown" role="button"
          data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
          aria-expanded="false">
         <img class=" avatar-img  rounded-circle " src="../../assets/photo/faker.jpg" alt="">

@@ -2,7 +2,10 @@
   <div class="position-sticky rounded-4 " style="top:5rem">
     <div class="p-2 bg-white rounded-4 mt-4 ">
       <div class="row">
-        <div class="h3  col-md-7 col-lg-8">🔥近期热搜</div>
+        <div class="h3  col-md-7 col-lg-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" style="color: #ff2834" class="bi bi-fire svg-icon " viewBox="0 0 16 16">
+          <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+        </svg><span>近期热搜</span></div>
         <div class="mousePoint h6 py-2 col-md-5 col-lg-4 text-danger" @click="changeTest">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
